@@ -26,5 +26,5 @@ jobs:
         cd dbg
         cmake -GNinja -DCMAKE_BUILD_TYPE=Debug ..
         ninja
-        export PATH="/usr/lib/llvm-14/bin/:$PATH"
+        export LLDB_DEBUGSERVER_PATH=/usr/lib/llvm-14/bin/lldb-server
         ctest . --output-on-failure
