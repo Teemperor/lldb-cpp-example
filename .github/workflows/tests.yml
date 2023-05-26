@@ -19,11 +19,11 @@ jobs:
     - name: Install dependencies
       run: |
         sudo apt-get update
-        sudo apt-get install -y python3 python3-pip lldb-14 python3-lldb cmake build-essential ninja-build liblldb-14-dev
+        sudo apt-get install -y python3 python3-pip lldb python3-lldb cmake build-essential ninja-build liblldb-dev
     - name: Run tests
       run: |
         mkdir dbg
         cd dbg
-        cmake -DLLDB_VERSION=14 -GNinja -DCMAKE_BUILD_TYPE=Debug ..
+        cmake -GNinja -DCMAKE_BUILD_TYPE=Debug ..
         ninja
         ctest . --output-on-failure

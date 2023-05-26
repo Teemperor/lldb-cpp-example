@@ -2,6 +2,7 @@
 
 import sys
 import subprocess as sp
+import os
 
 lldb = sys.argv[1]
 target = sys.argv[2]
