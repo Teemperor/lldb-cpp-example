@@ -26,4 +26,4 @@ jobs:
         cd dbg
         cmake -DLLDB_VERSION=14 -GNinja -DCMAKE_BUILD_TYPE=Debug ..
         ninja
-        ctest .
+        ctest . --output-on-failure
