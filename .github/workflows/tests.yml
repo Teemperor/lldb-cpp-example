@@ -24,6 +24,6 @@ jobs:
       run: |
         mkdir dbg
         cd dbg
-        cmake -GNinja -DCMAKE_BUILD_TYPE=Debug ..
+        cmake -DLLDB_VERSION=14 -GNinja -DCMAKE_BUILD_TYPE=Debug ..
         ninja
         ctest .
