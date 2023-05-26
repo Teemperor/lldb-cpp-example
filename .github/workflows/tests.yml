@@ -26,4 +26,5 @@ jobs:
         cd dbg
         cmake -GNinja -DCMAKE_BUILD_TYPE=Debug ..
         ninja
+        export PATH="/usr/lib/llvm-14/bin/:$PATH"
         ctest . --output-on-failure
