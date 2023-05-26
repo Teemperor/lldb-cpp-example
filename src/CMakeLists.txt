@@ -4,10 +4,10 @@ add_executable (${BINARY_NAME}
 )
 
 # Setup linking/compiling against LLDB.
-target_link_libraries(${BINARY_NAME} lldb-${LLDB_VERSION_SUFFIX})
-target_link_directories(${BINAR_NAME}
+target_link_libraries(${BINARY_NAME} lldb${LLDB_VERSION_SUFFIX})
+target_link_directories(${BINARY_NAME} PRIVATE
   "/usr/lib/llvm${LLDB_VERSION_SUFFIX}/lib/"
 )
-target_include_directories(${BINARY_NAME}
+target_include_directories(${BINARY_NAME} PRIVATE
   "/usr/lib/llvm${LLDB_VERSION_SUFFIX}/include/"
 )
